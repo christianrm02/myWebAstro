@@ -7,18 +7,18 @@ import Projects from "../components/Projects.astro"
 console.log("Loading")
 ---
 
-<Layout title="Portfolio Chrisytian Rivero. Full-Stack developer, desarrollador y programador.">
+<Layout title="Portfolio Christian Rivero. Full-Stack developer, desarrollador y programador.">
 	<main>
 		<section>
 			<h1 class="font-semibold text-center leading-tight flex flex-col gap-2">Full-stack developer
 				<span class="font-semibold text-4xl text-yellow-400 l g:text-3xl 2xl:text-5xl">Christian Rivero</span>
 			</h1>
-			<h2>&lt;/&gt; About Me</h2>
+			<h2 class="text-yellow-400">&lt;/&gt; About Me</h2>
 			<h2 class="max-w-xs font-medium text-neutral-400 lg:max-w-3xl 2xl:max-w-4xl text-pretty">Buenas! Soy Christian Rivero Marín, Ingeniero Informático de la especialidad del Software graduado el 2024.</h2>
 			<div class="w-full h-[2px] bg-neutral-800 mt-2 mb-2"></div>
 			<div class="flex flex-row">
 				<p class="text-left mb-2 mr-2">Skills: </p>
-				<div class="flex flex-wrap gap-2 justify-between mt-0.5">
+				<div class="flex flex-wrap gap-2 mt-0.5">
 					<Badge text="Java" alt="Native"></Badge>
 					<Badge text="C" alt="Native"></Badge>
 					<Badge text="Unity" alt="Native"></Badge>
@@ -26,7 +26,7 @@ console.log("Loading")
 			</div>
 			<div class="flex flex-row">
 				<p class="text-left mb-2 mr-2">Idiomas: </p>
-				<div class="flex flex-wrap gap-2 justify-between mt-0.5">
+				<div class="flex flex-wrap gap-2  mt-0.5">
 					<Badge text="Castellano" alt="Native"></Badge>
 					<Badge text="Catalán" alt="Native"></Badge>
 					<Badge text="Inglés" alt="Native"></Badge>
@@ -35,7 +35,7 @@ console.log("Loading")
 
 			<div class="w-full h-[2px] bg-neutral-800 mt-2 mb-2"></div>
 
-			<h2>&lt;/&gt; Projects</h2>
+			<h2 class="text-yellow-400">&lt;/&gt; Projects</h2>
 			<Projects />
 
 			<div class="project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-4 rounded-[24px] xl:p-12 xl:gap-0 2xl:p-16 2xl:gap-6">
@@ -78,13 +78,14 @@ console.log("Loading")
 			</div>
 
 			<div class="w-full h-[2px] bg-neutral-800 mt-2 mb-2"></div>
+			<h2 class="text-yellow-400">&lt;/&gt; Contact</h2>
 
 			<div class="flex items-center flex-col gap-5">
 				<div class="aspect-w-1 aspect-h-1 w-1/2">
 					<img class="w-half h-half drop-shadow-2xl rounded-full justify-center" src="/images/logoCRM.jpg" alt="ShoppyFree" style="opacity: 1; transform: translateX(0%) translateZ(0px);"></img>
 				</div>
 				<a href="mailto:christianrm02@gmail.com" class="button-contact z-30 pl-4 pr-2 py-2 rounded-full border border-white text-white font-normal text-sm flex items-center gap-3 sm:text-xl sm:gap-4 xl:pl-6 xl:pr-3 xl:py-3 2xl:pl-12 2xl:pr-6 2xl:py-4 2xl:text-3xl 2xl:gap-6" aria-label="Send me an email" data-astro-cid-xmivup5a="">
-					<p data-astro-cid-xmivup5a="">send an email ></p>
+					<p data-astro-cid-xmivup5a="">Send an email ></p>
 				</a>
 				<div class="flex gap-4 justify-center mt-0.5">
 					<a href="https://github.com/christianrm02" target="_blank">
