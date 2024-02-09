@@ -17,24 +17,71 @@ const TAGS = {
     name: "Django",
     class: "bg-[#0c4b33] text-white",
   },
+  UNITY: {
+    name: "Unity",
+    class: "bg-[#7f7f7f] text-white",
+  },
+  PUSHER: {
+    name: "Pusher",
+    class: "bg-[#8731d2] text-white",
+  },
+  C: {
+    name: "C",
+    class: "bg-[#a7b8cb] text-white",
+  },
+  OPENGL: {
+    name: "OpenGL",
+    class: "bg-[#5586a6] text-white",
+  },
+  CMASMAS: {
+    name: "C++",
+    class: "bg-[#004283] text-white",
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#f8981d] text-white",
+  },
+  SWING: {
+    name: "Swing",
+    class: "bg-[#49c93e] text-white",
+  },
 }
 const PROJECTS = [
   {
     title: "Cultucat - Red social sobre eventos culturales",
     description:
-      "Trabajo compartido de la universidad. El proyecto trata sobre un listador de eventos culturales en Cataluña. Mi posición en el trabajo fue de back-end, mis funcionalidades tuvieron que ver con: chat entre usuarios en tiempo real usando Pusher, la creación de trofeos y un sistema de puntos para poder conseguirlos, cada vez que se compra una entrada para un evento se genera un PDF resumen (simulando una entrada real) mostrando un QR aleatorio entre un conjunto seleccionado previamente.",
+      "Trabajo compartido de la universidad. El proyecto trata sobre un listador de eventos culturales en Cataluña. Mi posición en el trabajo fue de back-end, mis funcionalidades tuvieron que ver con: chat entre usuarios en tiempo real usando Pusher, sistema de trofeos + puntos + ránking, creación automática de PDF resumen con la compra de entradas.",
     link: "https://youtu.be/6a2a4atWzik",
     github: "https://github.com/orgs/CultuCat/repositories",
     image: "/images/cultucatLogo.png",
-    tags: [TAGS.DJANGO, TAGS.VUE],
+    tags: [TAGS.DJANGO, TAGS.VUE, TAGS.PUSHER],
+  },
+  {
+    title: "OrbitalBullet  - 3D minigame",
+    description:
+      "Trabajo compartido de la universidad. Juego hecho en OpenGL, compuesto por 2 niveles. La intención era hacer un juego lo más parecido al juego original. Mi posición en el trabajo fue toda la lógica del juego, IAs, interacciones, scroll de pantalla, sprites.",
+    link: "https://youtu.be/mKq0KYsVsbM",
+    github: "https://github.com/JoanTeruelJurado/OrbitalFight",
+    image: "/images/orbitalFight.webp",
+    tags: [TAGS.UNITY, TAGS.C],
+  }, 
+  {
+    title: "Copy SuperMarioBros NES",
+    description:
+      "Trabajo compartido de la universidad. Juego hecho en Unity, shooter 3D inspirado en OrbitalFight. Mi posición en el trabajo fue toda la lógica del juego, IAs, interacciones, todo lo relativo a la programación del gameplay, no a los assets y animaciones.",
+    link: "https://youtu.be/hLhyzy_RS2w",
+    github: "https://github.com/marcrq/VJ-2D",
+    image: "/images/marioBros.png",
+    tags: [TAGS.OPENGL, TAGS.CMASMAS],
   },
   {
     title: "Documentator  - App de gestión y creación de documentos",
     description:
-      "Trabajo compartido de la universidad. Aplicación de edición y almacenaje de documentoshecha en Java y Swing. Mi posición en el trabajo fue de front-end, diseñando y creando la gran mayoría de las vistas, la forma de conectarlas. ",
+      "Trabajo compartido de la universidad. Aplicación de edición y almacenaje de documentoshecha en Java y Swing. Mi posición en el trabajo fue de front-end, diseñando y creando la gran mayoría de las vistas y la forma de conectarlas.",
     link: "https://adventjs.dev",
-    image: "/images/estrella-mario-bros-png.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    github: "https://github.com/christianrm02/Editor-de-documentos",
+    image: "/images/Documentaitor2.png",
+    tags: [TAGS.JAVA, TAGS.SWING],
   },
 ]
 ---
@@ -42,36 +89,31 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"> 
-      <div class="w-full md:w-1/2 items-center">
-        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl lg:border lg:border-gray-800">
-          <img alt="Project logo" class="object-cover object-top w-full sm:h-full transition-transform transform hover:scale-105" loading="lazy" src={image} />
+    <article class="rounded-lg border border-yellow-400 border-opacity-10 bg-yellow-400 bg-opacity-10 hover:scale-105 transition duration-300"> 
+      <h3 class="m-2 text-2xl font-bold text-gray-800 dark:text-gray-100 w-full">{title}</h3>
+      <div class="ml-2 mr-2 mb-2 flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2 items-center mt-3">
+          <div class="relative flex mt-3 flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl lg:border lg:border-gray-800">
+            <a href={link} target="_blank">
+              <img alt="Project logo" class="object-cover object-top w-full sm:h-full transition-transform transform hover:scale-105" loading="lazy" src={image} />
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="w-full">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-          {title}
-        </h3>
-        <div class="flex flex-col mt-3">
-          <div class=" text-gray-700 dark:text-gray-400">{description}</div>
-          <ul class="flex flex-row mt-2 gap-x-2">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                  >
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-          </ul>
-          <a href={github} target="_blank" class=" mt-3 icon-work max-w-max text-[#a3a3a3] hover:text-white font-medium text-xs flex items-center justify-start gap-3 transition lg:text-xl lg:gap-4 2xl:text-2xl">
-                  <p>OPEN PROJECT</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 2xl:w-8 2xl:h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-                  </svg>
-                </a>
+        <div class="w-full">
+          <div class="flex flex-col mt-3">
+            <div class=" text-gray-700 dark:text-gray-400">{description}</div>
+            <ul class="flex flex-row mt-2 gap-x-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>{tag.name}</span>
+                  </li>
+                ))}
+            </ul>
+            <a href={github} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center justify-start gap-3 transition lg:text-xl lg:gap-4 2xl:text-2xl">
+              <p>OPEN PROJECT -></p>
+            </a>
+          </div>
         </div>
       </div>
     </article>
