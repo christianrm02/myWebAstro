@@ -6,31 +6,6 @@ import Projects from "../components/Projects.astro"
 
 //parte de javascript
 console.log("Loading")
-
-function openVideoPopup(event: MouseEvent) {
-  event.preventDefault();
-
-  // Reemplaza 'VIDEO_ID' con el ID del video de YouTube que deseas reproducir
-  var videoId = 'hLhyzy_RS2w';
-    
-  // Construye la URL del video en modo incrustado
-  var embedUrl = 'https://www.youtube.com/embed/' + videoId;
-
-  // Abre el video en una ventana emergente en el centro de la pestaña actual
-  window.open(embedUrl, '_blank', 'width=800, height=600, top=50%, left=50%, transform=translate(-50%, -50%)');
-}
-
-// Manejador de eventos en Astro
-if (typeof window !== 'undefined') {
-  window.addEventListener('DOMContentLoaded', function() {
-    const playLink = document.getElementById('playLink');
-    console.log("Aqui");
-    if (playLink) {
-      console.log("Aqui");
-      playLink.addEventListener('click', openVideoPopup);
-    }
-  });
-}
 ---
 <Layout title="Portfolio Christian Rivero. Full-Stack developer, desarrollador y programador.">
 	<main>
@@ -43,8 +18,6 @@ if (typeof window !== 'undefined') {
 				<p>About Me</p>
 			</h2>
 			<h2 class="max-w-xs text-lg font-medium text-neutral-400 lg:max-w-3xl 2xl:max-w-4xl text-pretty mb-5">Buenas! Soy Christian Rivero Marín, Ingeniero Informático de la especialidad del Software graduado el 2024. Novio de Sabrina desde 2024 ❤️.</h2>
-			
-			
 
 			<!-- <div class="flex flex-row">
 				<p class="text-left mb-2 mr-2">Skills: </p>
@@ -92,17 +65,8 @@ if (typeof window !== 'undefined') {
 						<p class="text-gray-400 hover:underline">Linkedin</p>
 					</a>
 				</div>
-			</div>
-
-			<a href="#" id="playLink" class="block bg-blue-500 text-white p-4 rounded-md transition hover:bg-blue-600">
-				<span class="flex items-center justify-center">
-				  <span class="ml-2">Reproducir tráiler</span>
-				</span>
-			  </a>
-			
-			
-		</section>
-		
+			</div>			
+		</section>		
 	</main>
 </Layout>
 
