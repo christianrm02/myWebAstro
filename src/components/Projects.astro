@@ -50,7 +50,7 @@ const PROJECTS = [
   {
     title: "Cultucat - Red social sobre eventos culturales",
     description:
-      "Trabajo compartido de la universidad. El proyecto trata sobre un listador de eventos culturales en Cataluña. Mi posición en el trabajo fue de back-end, mis funcionalidades tuvieron que ver con: chat entre usuarios en tiempo real usando Pusher, sistema de trofeos + puntos + ránking, creación automática de PDF resumen con la compra de entradas.",
+      "Trabajo compartido de la universidad. El proyecto trata sobre un listador de eventos culturales en Cataluña (información sobre ellos extraidos de la API de la Generalitat). Mi posición en el trabajo fue de back-end, mis funcionalidades tuvieron que ver con: chat entre usuarios en tiempo real usando Pusher, sistema de trofeos + puntos + ránking, creación automática de PDF resumen con la compra de entradas.",
     youtube: "https://youtu.be/6a2a4atWzik",
     github: "https://github.com/orgs/CultuCat/repositories",
     game: "",
@@ -104,7 +104,7 @@ const PROJECTS = [
 
         <div class="w-full">
           <div class="flex flex-col mt-3">
-            <div class=" text-gray-700 dark:text-gray-400">{description}</div>
+            <div class="text-justify text-gray-700 dark:text-gray-400">{description}</div>
             <ul class="flex flex-row mt-2 gap-x-2">
                 {tags.map((tag) => (
                   <li>
