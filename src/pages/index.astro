@@ -6,20 +6,35 @@ import SocialNetworks from "../components/SocialNetworks.astro"
 
 //parte de javascript
 console.log("Loading")
+const presentationText = "Buenas! Soy Christian Rivero Marín, ingeniero informático actualmente trabajando como Software Quality Assurance Tester en la empresa Ludium Lab. Esta web es mi portfolio, en ella se muestran algunos de los proyectos en los que he estado trabajando, para cada uno de ellos se adjuntan vídeos o código para mostrar más información sobre ellos."
 ---
 <Layout title="Portfolio Christian Rivero. Full-Stack developer, desarrollador y programador.">
 	<main>
 		<section id="top">
-			<h1 class="font-semibold text-center leading-tight flex flex-col gap-2 mt-20">Full-stack developer
-				<span class="font-semibold text-4xl text-yellow-400 l g:text-3xl 2xl:text-5xl">Christian Rivero</span>
-			</h1>
-			<h2 class="max-w-xs text-center text-lg font-medium text-neutral-400 lg:max-w-3xl 2xl:max-w-4xl mb-5">Buenas! Soy Christian Rivero Marín (CRM), Ingeniero Informático de la especialidad del Software graduado en 2024. Trabajando actualmente en la empresa española de cloud gaming LudiumLab en el departamento de QA. Este es mi curriculum con un poco de información sobre mi y sobre los proyectos más importantes en los que he sido partícipe. Para más información contactar por privado ✉️.</h2>
-			<h2 class="max-w-xs text-center text-lg font-medium text-bold-400 lg:max-w-3xl 2xl:max-w-4xl mb-5">🔨Portfolio en construcción...🔨</h2>
+			<div class="text-center mt-20">
+				<h1 class="font-semibold flex flex-col">
+					Full-stack developer
+					<span class="font-semibold text-4xl text-yellow-400 lg:text-3xl 2xl:text-5xl">Christian Rivero Marín</span>
+				</h1>
+			</div>
 
+			<h2 class="text-yellow-400 flex flex-row items-center mb-4 text-2xl">
+				<svg width="35" height="24" viewBox="0 0 24 24" fill="#facc15" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
+				<p>About me</p>
+			</h2> 
+			<h2 class="max-w-xs mx-auto text-lg font-medium text-neutral-400 lg:max-w-3xl lg:text-center lg:text-justify 2xl:max-w-4xl">{presentationText} Para contactar conmigo se puede hacer mediante la sección de contacto de esta misma web, o desde mi <a href="https://www.linkedin.com/in/christian-rivero-marín-384a4b26a" target="_blank" class="text-blue-500 underline">LinkedIn</a>.</h2>
+			
+			<div class="flex flex-row">
+				<img src="/images/pdf.png" alt="pdfLogo" class="w-6 h-6 mr-2">
+				<p>Más datos sobre mi en </p>
+				<a href="cv/CV.pdf" download class="btn text-xl ml-3 flex items-center">
+					<p class="text-lg font-semibold">mi currículum</p>
+				</a>
+			</div>
 			<section id="projects"></section>
 
 				<div class="w-full h-[2px] bg-neutral-800 mt-16 mb-10"></div>
-				<h2 class="text-yellow-400 flex flex-row items-center mb-4">
+				<h2 class="text-yellow-400 flex flex-row items-center mb-4 text-2xl">
 					<svg width="35" height="24" viewBox="0 0 24 24" fill="#facc15" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
 					<p>Projects</p>
 				</h2>
@@ -28,13 +43,13 @@ console.log("Loading")
 
 			<section id="contact"></section>
 				<div class="w-full h-[2px] bg-neutral-800 mt-16 mb-6"></div>
-				<h2 class="text-yellow-400 flex flex-row items-center mt-4">
+				<h2 class="text-yellow-400 flex flex-row items-center mt-4 text-2xl">
 					<svg width="35" height="24" viewBox="0 0 24 24" fill="#facc15" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
 					<p>Contact</p>
 				</h2>
 				<div class="flex items-center flex-col gap-5">
 					<div class="aspect-w-1 aspect-h-1 w-1/2">
-						<img class="w-half h-half drop-shadow-2xl rounded-full justify-center" src="/images/logoCRM.jpg" alt="LogoCRM" style="opacity: 1; transform: translateX(0%) translateZ(0px);"></img>
+						<img class="w-half h-half drop-shadow-2xl rounded-full justify-center" src="/images/yo_1-1.png" alt="Christian Rivero" style="opacity: 1; transform: translateX(0%) translateZ(0px);"></img>
 					</div>
 					<a href="mailto:christianrm02@gmail.com" class="button-contact z-30 pl-4 pr-2 py-2 rounded-full border border-white text-white font-normal text-sm flex items-center sm:text-xl xl:pl-6 xl:pr-3 xl:py-3 2xl:pl-12 2xl:pr-6 2xl:py-4 2xl:text-3xl group transition-transform transform hover:scale-105" aria-label="Send me an email" data-astro-cid-xmivup5a="">
 						<p>Send an email</p>

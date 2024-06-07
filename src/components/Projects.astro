@@ -45,8 +45,35 @@ const TAGS = {
     name: "Swing",
     class: "bg-[#49c93e] text-white",
   },
+  PLAYWRIGHT: {
+    name: "Playwright",
+    class: "bg-[#45BA4B] text-white",
+  },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-[#3E7A38] text-white",
+  },
+  ELECTRON: {
+    name: "Electron",
+    class: "bg-[#9FEAF9] text-white",
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#1D63ED] text-white",
+  }
 }
 const PROJECTS = [
+{
+    title: "TFG - TPlataforma de tests avanzados de aplicaciones web",
+    description:
+      'Trabajo final de grado de la carrera. Este ha sido mi mayor proyecto, en este proyecto se ha diseñado y creado un conjunto de tests avanzados utilizando la tecnología de Playwright (que para quién no lo conozca, es un framework de Microsoft lanzado en 2020 que permite realizar pruebas end-to-end y web scrapping, es compatible con múltiples navegadores). También se ha desarrollado una aplicación de escritorio para gestionar dichos tests. Además se han integrado en la pipeline continua de la empresa con la que se ha estado trabajando. Al ser un trabajo para una empresa el contenido es privado y no puedo mostrar ninguna demostración.',
+    youtube: "",
+    github: "",
+    game: "",
+    image: "/images/tests_play.png",
+    tags: [TAGS.PLAYWRIGHT, TAGS.NODEJS, TAGS.ELECTRON, TAGS.DOCKER],
+    type: "top_image"
+  },
   {
     title: "Cultucat - Red social sobre eventos culturales",
     description:
@@ -56,6 +83,7 @@ const PROJECTS = [
     game: "",
     image: "/images/cultucatLogo.png",
     tags: [TAGS.DJANGO, TAGS.VUE, TAGS.PUSHER],
+    type: "left_image"
   },
   {
     title: "OrbitalBullet  - 3D minigame",
@@ -66,6 +94,7 @@ const PROJECTS = [
     game: "https://joanterueljurado.itch.io/orbitalfight",
     image: "/images/orbitalFight.webp",
     tags: [TAGS.UNITY, TAGS.C],
+    type: "left_image"
   }, 
   {
     title: "Copy SuperMarioBros NES",
@@ -76,6 +105,7 @@ const PROJECTS = [
     game: "",
     image: "/images/marioBros.png",
     tags: [TAGS.OPENGL, TAGS.CMASMAS],
+    type: "left_image"
   },
   {
     title: "Documentator  - App de gestión y creación de documentos",
@@ -86,14 +116,57 @@ const PROJECTS = [
     game: "",
     image: "/images/Documentaitor2.png",
     tags: [TAGS.JAVA, TAGS.SWING],
+    type: "left_image"
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, youtube, github, game }) => (
-    <article class="rounded-lg border border-yellow-400 border-opacity-10 bg-yellow-400 bg-opacity-10 hover:scale-105 transition duration-300"> 
+  {PROJECTS.map(({ image, title, description, tags, youtube, github, game, type }) => {
+    if (type === "top_image") {
+      return (
+        <article class="rounded-lg border border-yellow-400 border-opacity-10 bg-yellow-400 bg-opacity-10 hover:scale-105 transition duration-300">
+          <h3 class="m-2 text-2xl font-bold text-gray-800 dark:text-gray-100 w-full">{title}</h3>
+          <div class="m-5 relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl lg:border lg:border-gray-800">
+            <img alt="Project logo" class="object-cover object-top w-full sm:h-full transition-transform transform hover:scale-105" loading="lazy" src={image} />
+          </div>
+          <div class="m-2">
+            <div class="ml-2 mr-2 mb-2 flex flex-col space-x-0 space-y-8 group">
+              <div class="w-full items-center mt-3">
+              <div class="text-justify text-gray-700 dark:text-gray-400">{description}</div>
+              <ul class="flex flex-row mt-2 gap-x-2">
+                  {tags.map((tag) => (
+                    <li>
+                      <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>{tag.name}</span>
+                    </li>
+                  ))}
+              </ul>
+
+              <div class="flex flex-row ml-auto gap-3">
+                {game !== "" &&(
+                  <a href={game} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M16 7h-3.25V6a.755.755 0 0 1 .75-.75h1A2.253 2.253 0 0 0 16.75 3a.75.75 0 0 0-1.5 0 .755.755 0 0 1-.75.75h-1A2.253 2.253 0 0 0 11.25 6v1H8c-3 0-5 2-5 6v4c0 2 1 4 3 4h.253a3.253 3.253 0 0 0 2.712-1.457 3.749 3.749 0 0 1 6.069.009A3.253 3.253 0 0 0 17.741 21H18c2 0 3-2 3-4v-4c0-4-2-6-5-6Zm-6 6.75H8.75V15a.75.75 0 0 1-1.5 0v-1.25H6a.75.75 0 0 1 0-1.5h1.25V11a.75.75 0 0 1 1.5 0v1.25H10a.75.75 0 0 1 0 1.5Zm4.75 1.5a1 1 0 1 1 1-1 1 1 0 0 1-1 1Zm2.5-2.5a1 1 0 1 1 1-1 1 1 0 0 1-1 1.001Z"></path></svg>
+                  </a>
+                )}
+                {youtube !== "" &&(
+                  <a href={youtube} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M21.582 7.191a2.51 2.51 0 0 0-1.768-1.772C18.254 5 12 5 12 5s-6.254 0-7.814.419c-.86.23-1.538.91-1.768 1.772C2 8.754 2 12.015 2 12.015s0 3.261.418 4.824a2.47 2.47 0 0 0 1.768 1.743c1.56.419 7.814.419 7.814.419s6.254 0 7.814-.419a2.47 2.47 0 0 0 1.768-1.743C22 15.276 22 12.015 22 12.015s0-3.261-.418-4.824ZM10 15V9l5 3-5 3Z"></path></svg>            
+                  </a>
+                )}
+                {github !== "" &&(
+                  <a href={github} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M21 12c0 3.988-2.596 7.365-6.189 8.546l-.001-.006c-.43.07-.58-.2-.58-.43 0-.3.01-1.27.01-2.47 0-.84-.29-1.39-.61-1.67 2-.22 4.11-.98 4.11-4.44 0-.98-.35-1.78-.93-2.41.1-.23.41-1.15-.08-2.39 0 0-.76-.24-2.48.93-.72-.2-1.49-.3-2.25-.31-.77.01-1.54.11-2.25.31-1.72-1.17-2.48-.93-2.48-.93-.49 1.24-.18 2.16-.09 2.39-.57.63-.92 1.43-.92 2.41 0 3.45 2.1 4.22 4.1 4.45-.26.22-.49.62-.57 1.2-.52.23-1.82.63-2.62-.75 0 0-.48-.86-1.38-.92 0 0-.88-.01-.06.54 0 0 .59.28 1 1.32 0 0 .52 1.61 3.03 1.06 0 .75.01 1.46.01 1.68 0 .23-.16.5-.58.43 0 .003.002.005.003.008C5.598 19.368 3 15.99 3 12c0-4.971 4.029-9 9-9s9 4.029 9 9Z"></path></svg>
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      );
+    } else {
+      return (
+      <article class="rounded-lg border border-yellow-400 border-opacity-10 bg-yellow-400 bg-opacity-10 hover:scale-105 transition duration-300"> 
       <h3 class="m-2 text-2xl font-bold text-gray-800 dark:text-gray-100 w-full">{title}</h3>
       <div class="ml-2 mr-2 mb-2 flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2 items-center mt-3">
@@ -102,39 +175,40 @@ const PROJECTS = [
           </div>
         </div>
 
-        <div class="w-full">
-          <div class="flex flex-col mt-3">
-            <div class="text-justify text-gray-700 dark:text-gray-400">{description}</div>
-            <ul class="flex flex-row mt-2 gap-x-2">
-                {tags.map((tag) => (
-                  <li>
-                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>{tag.name}</span>
-                  </li>
-                ))}
-            </ul>
 
-            <div class="flex flex-row ml-auto gap-3">
-              {game !== "" &&(
-                <a href={game} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
-                  <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M16 7h-3.25V6a.755.755 0 0 1 .75-.75h1A2.253 2.253 0 0 0 16.75 3a.75.75 0 0 0-1.5 0 .755.755 0 0 1-.75.75h-1A2.253 2.253 0 0 0 11.25 6v1H8c-3 0-5 2-5 6v4c0 2 1 4 3 4h.253a3.253 3.253 0 0 0 2.712-1.457 3.749 3.749 0 0 1 6.069.009A3.253 3.253 0 0 0 17.741 21H18c2 0 3-2 3-4v-4c0-4-2-6-5-6Zm-6 6.75H8.75V15a.75.75 0 0 1-1.5 0v-1.25H6a.75.75 0 0 1 0-1.5h1.25V11a.75.75 0 0 1 1.5 0v1.25H10a.75.75 0 0 1 0 1.5Zm4.75 1.5a1 1 0 1 1 1-1 1 1 0 0 1-1 1Zm2.5-2.5a1 1 0 1 1 1-1 1 1 0 0 1-1 1.001Z"></path></svg>
-                </a>
-              )}
-              {youtube !== "" &&(
-                <a href={youtube} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
-                  <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M21.582 7.191a2.51 2.51 0 0 0-1.768-1.772C18.254 5 12 5 12 5s-6.254 0-7.814.419c-.86.23-1.538.91-1.768 1.772C2 8.754 2 12.015 2 12.015s0 3.261.418 4.824a2.47 2.47 0 0 0 1.768 1.743c1.56.419 7.814.419 7.814.419s6.254 0 7.814-.419a2.47 2.47 0 0 0 1.768-1.743C22 15.276 22 12.015 22 12.015s0-3.261-.418-4.824ZM10 15V9l5 3-5 3Z"></path></svg>            
-                </a>
-              )}
-              <a href={github} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M21 12c0 3.988-2.596 7.365-6.189 8.546l-.001-.006c-.43.07-.58-.2-.58-.43 0-.3.01-1.27.01-2.47 0-.84-.29-1.39-.61-1.67 2-.22 4.11-.98 4.11-4.44 0-.98-.35-1.78-.93-2.41.1-.23.41-1.15-.08-2.39 0 0-.76-.24-2.48.93-.72-.2-1.49-.3-2.25-.31-.77.01-1.54.11-2.25.31-1.72-1.17-2.48-.93-2.48-.93-.49 1.24-.18 2.16-.09 2.39-.57.63-.92 1.43-.92 2.41 0 3.45 2.1 4.22 4.1 4.45-.26.22-.49.62-.57 1.2-.52.23-1.82.63-2.62-.75 0 0-.48-.86-1.38-.92 0 0-.88-.01-.06.54 0 0 .59.28 1 1.32 0 0 .52 1.61 3.03 1.06 0 .75.01 1.46.01 1.68 0 .23-.16.5-.58.43 0 .003.002.005.003.008C5.598 19.368 3 15.99 3 12c0-4.971 4.029-9 9-9s9 4.029 9 9Z"></path></svg>
+        <div class="w-full flex flex-col mt-3">
+          <div class="text-justify text-gray-700 dark:text-gray-400">{description}</div>
+          <ul class="flex flex-row mt-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>{tag.name}</span>
+                </li>
+              ))}
+          </ul>
+
+          <div class="flex flex-row ml-auto gap-3">
+            {game !== "" &&(
+              <a href={game} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M16 7h-3.25V6a.755.755 0 0 1 .75-.75h1A2.253 2.253 0 0 0 16.75 3a.75.75 0 0 0-1.5 0 .755.755 0 0 1-.75.75h-1A2.253 2.253 0 0 0 11.25 6v1H8c-3 0-5 2-5 6v4c0 2 1 4 3 4h.253a3.253 3.253 0 0 0 2.712-1.457 3.749 3.749 0 0 1 6.069.009A3.253 3.253 0 0 0 17.741 21H18c2 0 3-2 3-4v-4c0-4-2-6-5-6Zm-6 6.75H8.75V15a.75.75 0 0 1-1.5 0v-1.25H6a.75.75 0 0 1 0-1.5h1.25V11a.75.75 0 0 1 1.5 0v1.25H10a.75.75 0 0 1 0 1.5Zm4.75 1.5a1 1 0 1 1 1-1 1 1 0 0 1-1 1Zm2.5-2.5a1 1 0 1 1 1-1 1 1 0 0 1-1 1.001Z"></path></svg>
               </a>
-            </div>
+            )}
+            {youtube !== "" &&(
+              <a href={youtube} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M21.582 7.191a2.51 2.51 0 0 0-1.768-1.772C18.254 5 12 5 12 5s-6.254 0-7.814.419c-.86.23-1.538.91-1.768 1.772C2 8.754 2 12.015 2 12.015s0 3.261.418 4.824a2.47 2.47 0 0 0 1.768 1.743c1.56.419 7.814.419 7.814.419s6.254 0 7.814-.419a2.47 2.47 0 0 0 1.768-1.743C22 15.276 22 12.015 22 12.015s0-3.261-.418-4.824ZM10 15V9l5 3-5 3Z"></path></svg>            
+              </a>
+            )}
+            <a href={github} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M21 12c0 3.988-2.596 7.365-6.189 8.546l-.001-.006c-.43.07-.58-.2-.58-.43 0-.3.01-1.27.01-2.47 0-.84-.29-1.39-.61-1.67 2-.22 4.11-.98 4.11-4.44 0-.98-.35-1.78-.93-2.41.1-.23.41-1.15-.08-2.39 0 0-.76-.24-2.48.93-.72-.2-1.49-.3-2.25-.31-.77.01-1.54.11-2.25.31-1.72-1.17-2.48-.93-2.48-.93-.49 1.24-.18 2.16-.09 2.39-.57.63-.92 1.43-.92 2.41 0 3.45 2.1 4.22 4.1 4.45-.26.22-.49.62-.57 1.2-.52.23-1.82.63-2.62-.75 0 0-.48-.86-1.38-.92 0 0-.88-.01-.06.54 0 0 .59.28 1 1.32 0 0 .52 1.61 3.03 1.06 0 .75.01 1.46.01 1.68 0 .23-.16.5-.58.43 0 .003.002.005.003.008C5.598 19.368 3 15.99 3 12c0-4.971 4.029-9 9-9s9 4.029 9 9Z"></path></svg>
+            </a>
           </div>
         </div>
       </div>
     </article>
-    ))
-  }
+      );
+    }
+  })}
 </div>
+
 
 <!--
   <a href={github} target="_blank" class="ml-auto mt-3 icon-work max-w-max text-white opacity-90 hover:opacity-100 font-medium text-xs flex items-center transition lg:text-xl 2xl:text-2xl">
