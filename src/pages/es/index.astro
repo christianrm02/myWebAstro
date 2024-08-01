@@ -1,10 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Projects from "../components/Projects.astro";
-import SocialNetworks from "../components/SocialNetworks.astro";
-import enLang from "../../public/locales/en/translation.json" assert { type: 'json' }
+import Layout from "../../layouts/Layout.astro";
+import Projects from "../../components/Projects.astro";
+import SocialNetworks from "../../components/SocialNetworks.astro";
+import esLang from "../../../public/locales/es/translation.json" assert { type: 'json' }
 
-const language="en"
+const language="es"
+
 ---
 
 <Layout title="Portfolio Christian Rivero. Full-Stack developer, desarrollador y programador." language={language}>
@@ -19,20 +20,19 @@ const language="en"
 
 			<h2 class="text-yellow-400 flex flex-row items-center mb-4 text-2xl">
 				<svg width="35" height="24" viewBox="0 0 24 24" fill="#C2B103" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
-				<p>{enLang.about_me_title}</p>
+				<p>{esLang.about_me_title}</p>
 			</h2> 
 			<h2 class="max-w-m mx-auto text-lg font-medium text-neutral-300 text-center text-justify">
-				Hello! I am <strong class="text-back dark:text-white">Christian Rivero Marín</strong>, a 
-				computer engineer currently working as a
-				<strong class="text-back dark:text-white">Software Quality Assurance Tester</strong> 
-				at Ludium Lab. This website is my portfolio, where I showcase some of the projects I have 
-				developed. For each project, videos or code are attached to provide more details. To contact 
-				me, you can use the contact section of this website, or from my 
+				Buenas! Soy <strong class="text-back dark:text-white">Christian Rivero Marín</strong>, ingeniero informático actualmente 
+				trabajando como <strong class="text-back dark:text-white">Software Quality Assurance Tester</strong> en la empresa Ludium Lab. Esta web es mi portfolio, aquí 
+				muestro algunos de los proyectos que he desarrollado, para cada uno de ellos se adjuntan vídeos o 
+				código para mostrar más detalles. Para contactar conmigo se puede hacer mediante la sección de 
+				contacto de esta misma web, o desde mi 
 				<a href="https://www.linkedin.com/in/christian-rivero-marín-384a4b26a" target="_blank" class="text-blue-500 underline">LinkedIn</a>.
 			</h2>
 			<br>
 			<h2 class="text-lg font-medium text-neutral-300 text-left">
-				My <strong class="text-back dark:text-white">CV</strong> it can be downloaded from <a href="cv/CV_Christian_Rivero.pdf" download class="text-blue-500 underline">here</a>.
+				Mi <strong class="text-back dark:text-white">curriculum</strong> se puede descargar desde <a href="cv/CV_Christian_Rivero.pdf" download class="text-blue-500 underline">aquí</a>.
 			</h2> 
 			
 			<section id="projects"></section>
@@ -40,7 +40,7 @@ const language="en"
 				<div class="w-full h-[2px] bg-neutral-800 mt-16 mb-10"></div>
 				<h2 class="text-yellow-400 flex flex-row items-center mb-4 text-2xl">
 					<svg width="35" height="24" viewBox="0 0 24 24" fill="#C2B103" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
-					<p>{enLang.projects_title}</p>
+					<p>{esLang.projects_title}</p>
 				</h2>
 				<Projects language={language} />
 			</section>
@@ -49,14 +49,14 @@ const language="en"
 				<div class="w-full h-[2px] bg-neutral-800 mt-16 mb-6"></div>
 				<h2 class="text-yellow-400 flex flex-row items-center mt-4 text-2xl">
 					<svg width="35" height="24" viewBox="0 0 24 24" fill="#C2B103" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
-					<p>{enLang.contact_title}</p>
+					<p>{esLang.contact_title}</p>
 				</h2>
 				<div class="flex items-center flex-col gap-5">
 					<div class="aspect-w-1 aspect-h-1 w-1/2">
 						<img class="border-2 border-white w-half h-half drop-shadow-2xl rounded-full justify-center" src="/images/yo_1-1.png" alt="Christian Rivero" style="opacity: 1; transform: translateX(0%) translateZ(0px);"></img>
 					</div>
 					<a href="mailto:christianrm02@gmail.com" class="button-contact z-30 pl-4 pr-2 py-2 rounded-full border-2 border-white text-white font-normal text-sm flex items-center sm:text-xl xl:pl-6 xl:pr-3 xl:py-3 2xl:pl-12 2xl:pr-6 2xl:py-4 2xl:text-3xl group transition-transform transform hover:scale-105" aria-label="Send me an email" data-astro-cid-xmivup5a="">
-						<p>{enLang.send_email}</p>
+						<p>{esLang.send_email}</p>
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M20.692 12.287a.755.755 0 0 1-.162.243l-4 4a.75.75 0 0 1-1.06-1.06l2.719-2.72H4a.75.75 0 0 1 0-1.5h14.189L15.47 8.53a.75.75 0 1 1 1.06-1.06l4 4a.751.751 0 0 1 .162.817Z"></path></svg>
 					</a>
 					<SocialNetworks />

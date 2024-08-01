@@ -1,0 +1,28 @@
+{
+    "projects_title": "Proyectos",
+    "contact_title": "Contacto",
+    "projects": {
+        "tfg": {
+            "title": "TFG - Plataforma de tests avanzados de aplicaciones web",
+            "description": "Trabajo final de grado de la carrera. Este ha sido mi mayor proyecto, en solitario. Se ha diseñado y creado un conjunto de tests avanzados utilizando el framework Playwright (un framework de Microsoft lanzado en 2020 que permite realizar pruebas end-to-end y web scraping, compatible con múltiples navegadores), junto con el patrón Page-Object-Model. También se ha desarrollado una aplicación de escritorio para gestionar dichos tests. Además, se han integrado en la pipeline continua de la empresa con la que se ha trabajado. Al ser un trabajo para una empresa, el contenido es privado y no se puede mostrar ninguna demostración."
+        },
+        "cultucat": {
+            "title": "Cultucat - Red social sobre eventos culturales",
+            "description": "Trabajo en grupo de la carrera. El proyecto es una aplicación web que lista eventos culturales que suceden en Cataluña (información sobre ellos extraidos de la API de la Generalitat), con una compra fake y con componentes de redes sociales (se puede ver los participantes de los eventos, tener listado de amigos con solicitudes de amistad, enviar mensajes privados, etc). Mi posición en el trabajo fue principalmente en backend (desarrollado con Django, Python), mis funcionalidades tuvieron que ver con: chat entre usuarios en tiempo real usando Pusher, sistema de trofeos + puntos + ránking, sistema de descuentos, creación automática de PDFs resumen de la compra de tickets. Pero también me encargue de la pantalla de creación de evento por parte de los usuarios admin."
+        },
+        "orbitalBullet": {
+            "title": "OrbitalBullet - 3D minigame",
+            "description": "Trabajo en grupo de la carrera. Juego hecho en Unity, shooter 3D inspirado en OrbitalFight. Mi posición en el trabajo fue toda la lógica del juego (movimiento personaje, movimiento cámara, disparos, funcionamiento armas, gestión de vida y munición, etc), IAs, interacciones, todo lo relativo a la programación del gameplay. No participé en los assets o animaciones."
+        },
+        "mario": {
+            "title": "Copy SuperMarioBros NES",
+            "description": "Trabajo en grupo de la carrera. Juego hecho en OpenGL, compuesto por 2 niveles. La intención era hacer un juego lo más parecido al juego original. Me encargué de toda la lógica del juego (movimiento del personaje y los enemigos, gestión del tiempo, flujo de pantallas), IAs, interacciones entre entes, scroll de pantalla lateral, sprites, entre otros. No me encargué del diseño del mapa."
+        },
+        "documentator": {
+            "title": "Documentator - App de gestión y creación de documentos",
+            "description": "Trabajo en grupo de la carrera. Aplicación de edición y almacenaje de documentos implementada con Java y Swing. Mi posición en el trabajo fue de frontend, diseñando y creando la gran mayoría de las vistas y la forma de conectarlas."
+        }
+    },
+    "about_me_title": "Sobre mi",
+    "send_email": "Enviar correo"
+}

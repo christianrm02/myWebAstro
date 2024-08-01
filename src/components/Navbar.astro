@@ -1,26 +1,47 @@
 ---
+interface Props {
+	language: string;
+}
 
+const { language } = Astro.props;
+
+let lang, newLang, newLangPath;
+
+if (language === 'en') {
+  lang = await import('../../public/locales/en/translation.json');
+  newLang = "ES"
+  newLangPath = "es"
+} else if (language === 'es') {
+  lang = await import('../../public/locales/es/translation.json');
+  newLang = "EN"
+  newLangPath = "en"
+}
 ---
+
+<script>
+</script>
 
 <div class="w-full flex items-center justify-between bg-black fixed top-0 z-10 text-white p-4">
     <div class="flex items-center">
-        <!-- Logo redondo -->
-        <a class="rounded-full border border-white w-12 h-12 bg-white ml-4">
-            <img class="rounded-full" src="/images/yo_1-1.png" alt="logoCRM">
-        </a>
-        
-        <!-- Título y subtitulo -->
-        <div class="ml-2">
-            <p class="text-lg font-semibold">Portfolio</p>
-            <p class="text-sm text-neutral-400">Christian Rivero</p>
-        </div>
-    </div>
+    <!-- Logo redondo -->
+    <a class="rounded-full border border-white w-12 h-12 bg-white ml-4">
+      <img class="rounded-full" src="/images/yo_1-1.png" alt="logoCRM">
+    </a>
 
-    
-    
-    <!-- Atajos a la derecha -->
-    <div class="flex items-center space-x-4 mr-4">
-        <a href="#projects" class="text-neutral-400 hover:text-white transition">Projects</a>
-        <a href="#contact" class="text-neutral-400 hover:text-white transition">Contact</a>
+    <!-- Título y subtítulo -->
+    <div class="ml-2">
+      <p class="text-lg font-semibold">Portfolio</p>
+      <p class="text-sm text-neutral-400">Christian Rivero</p>
     </div>
+  </div>
+
+  <!-- Atajos a la derecha -->
+  <div class="flex items-center space-x-4 mr-4">
+    <button id="lang-toggle" class="text-neutral-400 hover:text-white transition"></button>
+
+
+    <a href=`/${newLangPath}` class="text-neutral-400 hover:text-white transition">{newLang}</a>
+    <a href="#projects" class="text-neutral-400 hover:text-white transition">{lang.projects_title}</a>
+    <a href="#contact" class="text-neutral-400 hover:text-white transition">{lang.contact_title}</a>
+  </div>
 </div>

@@ -3,13 +3,14 @@ import Navbar from '../components/Navbar.astro';
 
 interface Props {
 	title: string;
+	language: string;
 }
 
-const { title } = Astro.props;
+const { title, language } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={language}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Portfolio Christian Rivero" />
@@ -20,7 +21,7 @@ const { title } = Astro.props;
 	</head>
 	<body class="relative text-black dark:text-white scroll-smooth">
 		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24"></div>
-		<Navbar />
+		<Navbar language={language}/>
 		<slot />
 	</body>
 </html>

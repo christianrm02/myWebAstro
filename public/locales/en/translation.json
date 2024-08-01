@@ -1,0 +1,28 @@
+{
+    "projects_title": "Projects",
+    "contact_title": "Contact",
+    "projects": {
+        "tfg": {
+            "title": "TFG - Advanced Testing Platform for Web Applications",
+            "description": "Final degree project. This has been my biggest solo project. I designed and created a set of advanced tests using the Playwright framework (a Microsoft framework launched in 2020 that allows end-to-end testing and web scraping, compatible with multiple browsers), along with the Page-Object-Model pattern. A desktop application was also developed to manage these tests. Additionally, they were integrated into the continuous pipeline of the company with which I was working. As this work was for a company, the content is private, and no demonstration can be shown."
+        },
+        "cultucat": {
+            "title": "Cultucat - Social Network for Cultural Events",
+            "description": "Group project for the degree. The project is a web application that lists cultural events happening in Catalonia (information about them extracted from the Generalitat's API), with a fake purchase system and social network components (you can see event participants, have a list of friends with friend requests, send private messages, etc.). My role in the project was primarily backend (developed with Django, Python). My responsibilities included: real-time user chat using Pusher, trophy system + points + ranking, discount system, automatic PDF creation summarizing ticket purchases. I also handled the event creation screen for admin users."
+        },
+        "orbitalBullet": {
+            "title": "OrbitalBullet - 3D Minigame",
+            "description": "Group project for the degree. A game made in Unity, a 3D shooter inspired by OrbitalFight. My role was the entire game logic (character movement, camera movement, shooting, weapon functionality, health and ammo management, etc.), AIs, interactions, everything related to gameplay programming. I did not participate in assets or animations."
+        },
+        "mario": {
+            "title": "Copy SuperMarioBros NES",
+            "description": "Group project for the degree. A game made in OpenGL, consisting of 2 levels. The intention was to make a game as similar as possible to the original. I handled all the game logic (character and enemy movement, time management, screen flow), AIs, interactions between entities, side-scrolling, sprites, among others. I did not handle the map design."
+        },
+        "documentator": {
+            "title": "Documentator - Document Management and Creation App",
+            "description": "Group project for the degree. A document editing and storage application implemented with Java and Swing. My role was frontend, designing and creating the majority of the views and how to connect them."
+        }
+    },
+    "about_me_title": "About Me",
+    "send_email": "Send Email"
+}
