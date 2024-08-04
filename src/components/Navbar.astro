@@ -1,21 +1,13 @@
 ---
+import Trans from '../components/earthTranslations.astro';
 interface Props {
 	language: string;
 }
 
 const { language } = Astro.props;
 
-let lang: any, newLang, newLangPath;
-
-if (language === 'en') {
-  lang = await import('../../public/locales/en/translation.json');
-  newLang = "ES"
-  newLangPath = "es"
-} else if (language === 'es') {
-  lang = await import('../../public/locales/es/translation.json');
-  newLang = "EN"
-  newLangPath = "en"
-}
+const lang: any = await import(`../../public/locales/${language}/translation.json`);
+if (!lang) throw new Error('Language file could not be loaded');
 
 if (!lang) {
   throw new Error('Language file could not be loaded');
@@ -34,7 +26,7 @@ if (!lang) {
 
     <!-- Título y subtítulo -->
     <div class="ml-2">
-      <p class="text-lg font-semibold">Portfolio</p>
+      <p class="text-lg font-semibold">{lang.portfolio}</p>
       <p class="text-sm text-neutral-400">Christian Rivero</p>
     </div>
   </div>
@@ -43,9 +35,8 @@ if (!lang) {
   <div class="flex items-center space-x-4 mr-4">
     <button id="lang-toggle" class="text-neutral-400 hover:text-white transition"></button>
 
-
-    <a href=`/${newLangPath}` class="text-neutral-400 hover:text-white transition">{newLang}</a>
     <a href="#projects" class="text-neutral-400 hover:text-white transition">{lang.projects_title}</a>
     <a href="#contact" class="text-neutral-400 hover:text-white transition">{lang.contact_title}</a>
+    <Trans language={language}/>
   </div>
 </div>

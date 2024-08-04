@@ -1,0 +1,34 @@
+{
+    "portfolio": "Portafoli",
+    "projects_title": "Projectes",
+    "contact_title": "Contacte",
+    "projects": {
+        "tfg": {
+            "title": "TFG - Plataforma Avançada de Test per a Aplicacions Web",
+            "description": "Projecte final de grau. Aquest ha estat el meu projecte més gran en solitari. Vaig dissenyar i crear un conjunt de tests avançats utilitzant el framework Playwright (un framework de Microsoft llançat el 2020 que permet fer proves end-to-end i web scraping, compatible amb diversos navegadors), juntament amb el patró Page-Object-Model. També es va desenvolupar una aplicació d'escriptori per gestionar aquests tests. A més, es van integrar en la pipeline contínua de l'empresa amb la qual estava treballant. Com que aquest treball era per a una empresa, el contingut és privat i no es pot mostrar cap demostració."
+        },
+        "cultucat": {
+            "title": "Cultucat - Xarxa Social per a Esdeveniments Culturals",
+            "description": "Projecte en grup pel grau. El projecte és una aplicació web que llista esdeveniments culturals que tenen lloc a Catalunya (informació sobre ells extreta de l'API de la Generalitat), amb un sistema de compra fals i components de xarxes socials (pots veure els participants dels esdeveniments, tenir una llista d'amics amb sol·licituds d'amistat, enviar missatges privats, etc.). El meu paper en el projecte va ser principalment backend (desenvolupat amb Django, Python). Les meves responsabilitats incloïen: xat en temps real entre usuaris utilitzant Pusher, sistema de trofeus + punts + rànquing, sistema de descomptes, creació automàtica de PDFs resumint les compres de tiquets. També em vaig encarregar de la pantalla de creació d'esdeveniments per part dels usuaris admin."
+        },
+        "orbitalBullet": {
+            "title": "OrbitalBullet - Minijoc 3D",
+            "description": "Projecte en grup pel grau. Un joc fet amb Unity, un shooter 3D inspirat en OrbitalFight. El meu paper va ser tota la lògica del joc (moviment del personatge, moviment de la càmera, disparar, funcionalitat de les armes, gestió de la vida i la munició, etc.), IA, interaccions, tot el que està relacionat amb la programació del gameplay. No vaig participar en els assets o les animacions."
+        },
+        "mario": {
+            "title": "Còpia de SuperMarioBros NES",
+            "description": "Projecte en grup pel grau. Un joc fet amb OpenGL, compost per 2 nivells. La intenció era fer un joc el més semblant possible a l'original. Em vaig encarregar de tota la lògica del joc (moviment del personatge i els enemics, gestió del temps, flux de pantalles), IA, interaccions entre entitats, desplaçament lateral de la pantalla, sprites, entre d'altres. No em vaig encarregar del disseny del mapa."
+        },
+        "documentator": {
+            "title": "Documentator - Aplicació de Gestió i Creació de Documents",
+            "description": "Projecte en grup pel grau. Una aplicació d'edició i emmagatzematge de documents implementada amb Java i Swing. El meu paper va ser frontend, dissenyant i creant la majoria de les vistes i les seves connexions."
+        }
+    },
+    "about_me_title": "Sobre mi",
+    "send_email": "Enviar correu",
+    "languages": {
+        "spanish": "Castellà",
+        "english": "Anglès",
+        "catalan": "Català"
+    }
+}

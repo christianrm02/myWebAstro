@@ -1,0 +1,88 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Projects from "../../components/Projects.astro";
+import SocialNetworks from "../../components/SocialNetworks.astro";
+import catLang from "../../../public/locales/cat/translation.json" assert { type: 'json' }
+
+const language="cat"
+
+---
+
+<Layout title="Portfolio Christian Rivero. Full-Stack developer, desenvolupador i programador." language={language}>
+	<main>
+		<section id="top">
+			<div class="text-center mt-20">
+				<h1 class="font-semibold flex flex-col">
+					Full-stack developer
+					<span class="mt-4 font-semibold text-4xl text-yellow-400 lg:text-3xl 2xl:text-5xl">Christian Rivero Marín</span>
+				</h1>
+			</div>
+
+			<h2 class="text-yellow-400 flex flex-row items-center mb-4 text-2xl">
+				<svg width="35" height="24" viewBox="0 0 24 24" fill="#C2B103" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
+				<p>{catLang.about_me_title}</p>
+			</h2> 
+			<h2 class="max-w-m mx-auto text-lg font-medium text-neutral-300 text-center text-justify">
+				Hola! Soc <strong class="text-back dark:text-white">Christian Rivero Marín</strong>, enginyer informàtic actualment 
+				treballant com a <strong class="text-back dark:text-white">Software Quality Assurance Tester</strong> a l'empresa Ludium Lab. Aquesta web és el meu portafoli, aquí 
+				mostro alguns dels projectes que he desenvolupat; per a cadascun d'ells s'adjunten vídeos o 
+				codi per mostrar més detalls. Per contactar amb mi es pot fer mitjançant la secció de 
+				contacte d'aquesta mateixa web, o des del meu 
+				<a href="https://www.linkedin.com/in/christian-rivero-marín-384a4b26a" target="_blank" class="text-blue-500 underline">LinkedIn</a>.
+			</h2>
+			<br>
+			<h2 class="text-lg font-medium text-neutral-300 text-left">
+				El meu <strong class="text-back dark:text-white">currículum</strong> es pot descarregar des de <a href="cv/CV_Christian_Rivero.pdf" download class="text-blue-500 underline">aquí</a>.
+			</h2>
+			
+			
+			<section id="projects"></section>
+
+				<div class="w-full h-[2px] bg-neutral-800 mt-16 mb-10"></div>
+				<h2 class="text-yellow-400 flex flex-row items-center mb-4 text-2xl">
+					<svg width="35" height="24" viewBox="0 0 24 24" fill="#C2B103" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
+					<p>{catLang.projects_title}</p>
+				</h2>
+				<Projects language={language} />
+			</section>
+
+			<section id="contact"></section>
+				<div class="w-full h-[2px] bg-neutral-800 mt-16 mb-6"></div>
+				<h2 class="text-yellow-400 flex flex-row items-center mt-4 text-2xl">
+					<svg width="35" height="24" viewBox="0 0 24 24" fill="#C2B103" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 8.53 4.061 12l3.469 3.47a.75.75 0 1 1-1.06 1.06l-4-4a.749.749 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06Zm14 2.94-4-4a.75.75 0 0 0-1.06 1.06L19.939 12l-3.469 3.47a.75.75 0 1 0 1.06 1.06l4-4a.749.749 0 0 0 0-1.06ZM15.263 3.3a.749.749 0 0 0-.965.439l-6 16a.749.749 0 0 0 .439.965.736.736 0 0 0 .263.046.75.75 0 0 0 .7-.487l6-16a.749.749 0 0 0-.437-.963Z"></path></svg>
+					<p>{catLang.contact_title}</p>
+				</h2>
+				<div class="flex items-center flex-col gap-5">
+					<div class="aspect-w-1 aspect-h-1 w-1/2">
+						<img class="border-2 border-white w-half h-half drop-shadow-2xl rounded-full justify-center" src="/images/yo_1-1.png" alt="Christian Rivero" style="opacity: 1; transform: translateX(0%) translateZ(0px);"></img>
+					</div>
+					<a href="mailto:christianrm02@gmail.com" class="button-contact z-30 pl-4 pr-2 py-2 rounded-full border-2 border-white text-white font-normal text-sm flex items-center sm:text-xl xl:pl-6 xl:pr-3 xl:py-3 2xl:pl-12 2xl:pr-6 2xl:py-4 2xl:text-3xl group transition-transform transform hover:scale-105" aria-label="Send me an email" data-astro-cid-xmivup5a="">
+						<p>{catLang.send_email}</p>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M20.692 12.287a.755.755 0 0 1-.162.243l-4 4a.75.75 0 0 1-1.06-1.06l2.719-2.72H4a.75.75 0 0 1 0-1.5h14.189L15.47 8.53a.75.75 0 1 1 1.06-1.06l4 4a.751.751 0 0 1 .162.817Z"></path></svg>
+					</a>
+					<SocialNetworks />
+				</div>
+			</section>	
+		</section>		
+	</main>
+</Layout>
+
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 850px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+</style>

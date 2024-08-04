@@ -5,16 +5,8 @@ interface Props {
 
 const { language } = Astro.props;
 
-let lang: any;
-if (language === 'en') {
-  lang = await import('../../public/locales/en/translation.json');
-} else if (language === 'es') {
-  lang = await import('../../public/locales/es/translation.json');
-}
-
-if (!lang) {
-  throw new Error('Language file could not be loaded');
-}
+const lang: any = await import(`../../public/locales/${language}/translation.json`);
+if (!lang) throw new Error('Language file could not be loaded');
 
 const TAGS = {
   NEXT: {

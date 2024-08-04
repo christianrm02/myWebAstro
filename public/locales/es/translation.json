@@ -1,4 +1,5 @@
 {
+    "portfolio": "Portafolio",
     "projects_title": "Proyectos",
     "contact_title": "Contacto",
     "projects": {
@@ -24,5 +25,10 @@
         }
     },
     "about_me_title": "Sobre mi",
-    "send_email": "Enviar correo"
+    "send_email": "Enviar correo",
+    "languages": {
+        "spanish": "Español",
+        "english": "Inglés",
+        "catalan": "Catalán"
+    }
 }

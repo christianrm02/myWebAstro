@@ -1,4 +1,5 @@
 {
+    "portfolio": "Portfolio",
     "projects_title": "Projects",
     "contact_title": "Contact",
     "projects": {
@@ -23,6 +24,11 @@
             "description": "Group project for the degree. A document editing and storage application implemented with Java and Swing. My role was frontend, designing and creating the majority of the views and how to connect them."
         }
     },
-    "about_me_title": "About Me",
-    "send_email": "Send Email"
+    "about_me_title": "About me",
+    "send_email": "Send email",
+    "languages": {
+        "spanish": "Spanish",
+        "english": "English",
+        "catalan": "Catalan"
+    }
 }
